@@ -61,7 +61,6 @@ const Image = props => {
                 <img src={image.hdurl} alt={image.copyright}></img>
             <div>
                 <h2>Name:<br></br>{image.title}</h2>
-                <button onClick={() => toggleDescription()}> View Description</button>
                 {
                  description ?   
                 <div>    
@@ -69,8 +68,10 @@ const Image = props => {
                     <p>{image.explanation}</p>
                 </div> 
                 : null
-                }
+                } 
+                <button onClick={() => toggleDescription()}> View Description</button>
             </div>
+
 
 
         </StyledImgContainer>
