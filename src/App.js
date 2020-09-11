@@ -4,12 +4,17 @@ import axios from "axios";
 import Header from "./Header"
 import Image from "./Image"
 import Footer from "./Footer"
-
+import styled from 'styled-components'
 
 function App() {
 
   const [image, setImage] = useState([])
-  //const [description, setDescription] =useState([])
+
+  const Background = styled.div`
+    background-image: linear-gradient(black, #8c8e9a);
+  `
+
+
 
 
   useEffect(() => {
@@ -24,11 +29,11 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <Background className="App">
       <Header image={image}/>
       <Image image={image}/>
       <Footer image={image}/>
-    </div>
+    </Background>
   );
 }
 
